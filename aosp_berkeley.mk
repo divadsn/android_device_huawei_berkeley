@@ -21,6 +21,10 @@ PRODUCT_COPY_FILES += \
 # Inherit AOSP device configuration for berkeley
 $(call inherit-product, device/huawei/berkeley/full_berkeley.mk)
 
+# PixelExperience stuff
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_GAPPS_ARCH := arm64
+
 # Inherit some common AOSP stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
