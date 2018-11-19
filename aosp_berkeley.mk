@@ -21,8 +21,12 @@ PRODUCT_COPY_FILES += \
 # Inherit AOSP device configuration for berkeley
 $(call inherit-product, device/huawei/berkeley/full_berkeley.mk)
 
-# Inherit some common AOSP stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# AOSP Extended stuff
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_USE_JELLY := true
+
+# Inherit some common AEX stuff.
+$(call inherit-product, vendor/aosp/config/common.mk)
 
 # Disable dynamic partition size
 PRODUCT_USE_DYNAMIC_PARTITION_SIZE := false
